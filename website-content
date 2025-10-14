@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Koo | Future of Work Strategist</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* New minimalist styling based on Kelvin/Jillian/Yash */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        /* Font prioritization: Helvetica Neue, Helvetica, Arial */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f7f7f7; /* Subtle off-white background */
+            color: #1f2937; /* Dark gray text */
+            line-height: 1.5; /* Slightly reduced line height */
+            font-size: 13px; /* Base size proportional to 10pt/12pt request */
+        }
+        
+        .container {
+            max-width: 44rem; /* Slightly narrower for focus */
+            margin: 0 auto;
+            padding: 2rem 1.5rem; /* Reduced padding */
+        }
+        
+        /* H1 (Irene Koo) is the largest element (32px) */
+        h1 {
+            font-size: 32px; 
+            font-weight: 800;
+        }
+
+        /* Subtitle is smaller (24px) but still prominent */
+        .subtitle {
+            font-size: 24px; 
+            font-weight: 800; /* Bolded for impact */
+            line-height: 1.1;
+        }
+        
+        /* Section Title (H2) remains 16px (smaller than H1 and subtitle) */
+        .section-title {
+            font-size: 16px; 
+            font-weight: 800; /* font-extrabold */
+            color: #1f2937;
+            margin-bottom: 1rem; /* Reduced margin */
+            padding-top: 2rem; /* Reduced vertical space above each section */
+            border-top: 1px solid #e5e7eb; /* Subtle top border for separation */
+        }
+        
+        .content-item {
+            margin-bottom: 1rem; /* Reduced margin */
+        }
+        
+        /* Link styling: All links are purple */
+        .content-item a,
+        .archive-narrative a {
+            font-weight: 600;
+            color: #4f46e5; /* Indigo/Purple */
+            transition: color 150ms;
+        }
+        
+        .content-item a:hover,
+        .archive-narrative a:hover {
+            color: #7c3aed; /* Violet */
+            text-decoration: underline;
+        }
+        
+        /* Link styling specifically for the Nature Geoscience paper (purple, no underline) */
+        .archive-narrative .nature-link {
+            color: #8b5cf6; /* A slightly softer purple for contrast */
+        }
+
+        /* Adjusted list styles for the new narrative section */
+        .archive-narrative p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Custom styling for the profile image: 64x64 square in the header */
+        .profile-image {
+            width: 64px; 
+            height: 64px; 
+            object-fit: cover;
+            border-radius: 4px; 
+            border: 2px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container">
+
+        <!-- Name and Intro Statement (Hero Section) - FLEX CONTAINER -->
+        <header class="mb-10 pt-4 flex items-center">
+            <!-- Image is now first (left aligned) and larger -->
+            <img src="IMG_0177.jpg" alt="Irene Koo Profile Photo" class="profile-image mr-6" />
+            
+            <div>
+                <!-- H1 (Irene Koo) is the largest element -->
+                <h1 class="font-extrabold mb-1 tracking-tighter">
+                    Irene Koo
+                </h1>
+
+                <!-- Subtitle is smaller but still prominent -->
+                <p class="subtitle font-normal leading-snug max-w-lg">
+                    lifelong learning, future of work, tech — and tinkering with everything in between.
+                </p>
+            </div>
+        </header>
+
+        <!-- Current Focus Section (Now "lately - ") -->
+        <section id="focus" class="mb-8">
+            <h2 class="section-title">
+                lately -
+            </h2>
+
+            <ul class="space-y-4">
+                <li class="content-item">
+                    <span class="font-semibold">obsessing with future of work.</span> through hosting FoW dinners in SF, NYC, Boston; writing about my thoughts; interviewing community colleges, favorite faculty members, and tinkering. <span class="text-gray-500">more here.</span>
+                </li>
+                <li class="content-item">
+                    <span class="font-semibold">building community.</span> partnering with stellar founders & builders, via <a href="http://somafellows.com" target="_blank">Soma Fellows</a>.
+                </li>
+                <li class="content-item">
+                    <!-- Hyperlinked 'Build Labs' text -->
+                    <span class="font-semibold">scaling <a href="http://build-lab.studio/" target="_blank">Build Labs</a></span> global AI & social entrepreneurship non-profit across 4 continents.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Archive Section (Narrative Structure) -->
+        <section id="archive" class="mb-8">
+            <h2 class="section-title">
+                archives
+            </h2>
+
+            <div class="archive-narrative text-gray-700">
+                <p>
+                    Largely shaped by questions and bets, I've led many lives, as a second author of a <a href="https://ui.adsabs.harvard.edu/abs/2020NatGe..13..482D/abstract" target="_blank" class="nature-link">Nature Geoscience paper</a>, leading entrepreneurship initiatives at Columbia, and playing racquetball competitively. I've spent time as a <strong>PM</strong> at Twitter and Apollo.io, one of the first operators for a <a href="http://abbycare.org/" target="_blank">healthcare startup</a> backed by Sequoia and Khosla, with 0 to $10MM ARR in 8 months, and <strong>an early supporter in crazy ideas</strong> (Soma Capital, angel investing).
+                </p>
+                <p>
+                    A common through line is investigating talent, learning, and access to opportunities from an economic mobility lens, which brought me to Harvard Graduate School of Education. 
+                </p>
+                <p>
+                    Outside of work — I hop cafes, run, and host fun dinners. 
+                </p>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="connect" class="mb-8">
+            <h2 class="section-title">
+                Connect
+            </h2>
+
+            <ul class="space-y-2">
+                <li class="content-item">
+                    <a href="mailto:irenekoo97@gmail.com">Email</a>
+                </li>
+                <li class="content-item">
+                    <a href="https://linkedin.com/in/irenekoo" target="_blank">LinkedIn</a>
+                </li>
+                <li class="content-item">
+                    <a href="https://github.com/irnee-k" target="_blank">GitHub</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-4 border-t border-gray-200 text-center text-sm text-gray-500 mt-10">
+            <p>
+                This portfolio is hosted via GitHub Pages and configured with a custom domain.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
