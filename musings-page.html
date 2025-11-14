@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musings and Drafts in Progress - Irene Koo</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        /* Font prioritization: Helvetica Neue, Helvetica, Arial */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f7f7f7; /* Subtle off-white background */
+            color: #1f2937; /* Dark gray text */
+            line-height: 1.5; /* Slightly reduced line height */
+            font-size: 13px; /* Base size proportional to 10pt/12pt request */
+        }
+        
+        .container {
+            max-width: 44rem; /* Slightly narrower for focus */
+            margin: 0 auto;
+            padding: 2rem 1.5rem; /* Reduced padding */
+        }
+        
+        /* H1 (Page Title) */
+        h1 {
+            font-size: 24px; 
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        /* Section Title (H2) */
+        .section-title {
+            font-size: 16px; 
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .section-title:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        
+        /* Link styling */
+        a {
+            font-weight: 600;
+            color: #4f46e5; /* Indigo/Purple */
+            transition: color 150ms;
+        }
+        
+        a:hover {
+            color: #7c3aed; /* Violet */
+            text-decoration: underline;
+        }
+
+        /* Content styling */
+        .content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+
+        .content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .content h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        /* Navigation styling */
+        nav {
+            margin-bottom: 3rem;
+        }
+
+        nav a {
+            font-size: 13px;
+            color: #6b7280;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            transition: color 150ms;
+        }
+
+        nav a:hover {
+            color: #1f2937;
+        }
+
+        nav a.active {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        /* Draft item styling */
+        .draft-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .draft-item:last-child {
+            border-bottom: none;
+        }
+
+        .draft-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .draft-meta {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-bottom: 0.75rem;
+        }
+
+        .draft-preview {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container">
+
+        <!-- Navigation -->
+        <nav class="pt-8">
+            <a href="index.html">home</a>
+            <a href="musings.html" class="active">musings and drafts in progress</a>
+        </nav>
+
+        <!-- Page Title -->
+        <header class="mb-8">
+            <h1>musings and drafts in progress</h1>
+        </header>
+
+        <!-- Questions Section -->
+        <section id="questions">
+            <h2 class="section-title">questions I'm mulling over</h2>
+            
+            <div class="content">
+                <ul>
+                    <li>How do we build learning systems that adapt to individual curiosity rather than standardized outcomes?</li>
+                    <li>What does meaningful work look like when AI can do most knowledge tasks?</li>
+                    <li>Can economic mobility exist without geographical mobility in the age of remote work?</li>
+                    <li>Why do we still organize education around time (semesters, years) instead of mastery?</li>
+                    <li>What happens to middle managers when coordination becomes trivial?</li>
+                    <li>How do we measure learning that happens outside traditional institutions?</li>
+                    <li>Is the credential or the learning more valuable? And to whom?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Drafts Section -->
+        <section id="drafts">
+            <h2 class="section-title">drafts in progress</h2>
+            
+            <div class="content">
+                <!-- Draft 1 -->
+                <div class="draft-item">
+                    <div class="draft-title">The Unbundling of Higher Education</div>
+                    <div class="draft-meta">Draft · November 2025</div>
+                    <div class="draft-preview">
+                        Exploring how universities are being disaggregated into their core functions: credentialing, community, curriculum, and career services. What happens when each of these can be sourced independently?
+                    </div>
+                </div>
+
+                <!-- Draft 2 -->
+                <div class="draft-item">
+                    <div class="draft-title">Notes on Economic Mobility in the AI Age</div>
+                    <div class="draft-meta">Draft · October 2025</div>
+                    <div class="draft-preview">
+                        As AI democratizes access to knowledge and tools, the barriers to entry drop dramatically. But does this actually improve economic mobility, or does it just shift the goalposts?
+                    </div>
+                </div>
+
+                <!-- Draft 3 -->
+                <div class="draft-item">
+                    <div class="draft-title">Community Colleges as Innovation Hubs</div>
+                    <div class="draft-meta">Research in progress</div>
+                    <div class="draft-preview">
+                        Conversations with community college administrators reveal institutions adapting faster than traditional universities. They're closer to labor markets, more responsive to student needs, and less constrained by tradition.
+                    </div>
+                </div>
+
+                <!-- Placeholder for more content -->
+                <div class="draft-preview" style="margin-top: 2rem; font-style: italic; color: #9ca3af;">
+                    More coming soon...
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-4 border-t border-gray-200 text-center text-sm text-gray-500 mt-10">
+            <p>
+                💌 made with love, from all pockets of the world
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
