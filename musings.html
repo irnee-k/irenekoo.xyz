@@ -51,12 +51,13 @@
         /* Link styling */
         a {
             font-weight: 600;
-            color: #4f46e5; /* Indigo/Purple */
+            color: #8b5cf6; /* Purple */
             transition: color 150ms;
+            text-decoration: none;
         }
         
         a:hover {
-            color: #7c3aed; /* Violet */
+            color: #7c3aed; /* Darker violet on hover */
             text-decoration: underline;
         }
 
@@ -68,7 +69,7 @@
 
         .content ul {
             list-style-type: none;
-            padding-left: 2.5rem;
+            padding-left: 3rem;
             margin-bottom: 1.5rem;
         }
 
@@ -81,7 +82,7 @@
         .content li:not(.toggle-item)::before {
             content: '•';
             position: absolute;
-            left: -2.5rem;
+            left: -1.5rem;
             color: #4b5563;
             font-size: 18px;
         }
@@ -154,7 +155,7 @@
         .toggle-item::before {
             content: '▸';
             position: absolute;
-            left: -2.5rem;
+            left: -1.5rem;
             transition: transform 0.2s;
             color: #6b7280;
             font-size: 16px;
@@ -167,8 +168,8 @@
         .toggle-content {
             display: none;
             margin-top: 0.5rem;
-            padding-left: 1rem;
-            border-left: 2px solid #e5e7eb;
+            padding-left: 0;
+            border-left: none;
         }
 
         .toggle-content.visible {
@@ -176,7 +177,7 @@
         }
 
         .toggle-content ul {
-            list-style-type: circle;
+            list-style-type: none;
             padding-left: 1.5rem;
             margin-top: 0.5rem;
         }
@@ -184,6 +185,11 @@
         .toggle-content li {
             margin-bottom: 0.5rem;
             font-size: 13px;
+            position: relative;
+        }
+
+        .toggle-content li::before {
+            content: '';
         }
     </style>
 </head>
@@ -227,21 +233,14 @@
                         </div>
                     </li>
                     <li>What enablement layer is needed for companies to robustly understand skills of employees, and develop strategies accordingly?</li>
-                    <li class="toggle-item" onclick="toggleContent(this)">
-                        How do we align company/individual incentives to continue investments in lifelong learning?
-                        <div class="toggle-content">
-                            <ul>
-                                <li>What does this look like?</li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li> How do we align company/individual incentives to continue investments in lifelong learning?</li> 
                 </ul>
             </div>
         </section>
 
         <!-- Smaller Questions Section -->
         <section id="smaller-questions">
-            <h2 class="section-title">smaller potato questions and areas of interest</h2>
+            <h2 class="section-title">smaller questions (for now)</h2>
             
             <div class="content">
                 <ul>
@@ -268,10 +267,10 @@
                         </div>
                     </li>
                     <li class="toggle-item" onclick="toggleContent(this)">
-                        Reimagining higher education - current writing in progress
+                        Reimagining higher education - writing in progress
                         <div class="toggle-content">
                             <ul>
-                                <li>Challenging notion that higher educations should be 2-4 years, and should really support learning in and outside of traditional classrooms. Largely inspired by Stanford Design School's 2015 exploration: <a href="http://www.stanford2025.com" target="_blank">Stanford 2025</a></li>
+                                <li>Challenging notion that higher educations should be 2-4 years, and should really support learning in and outside of traditional classrooms. Largely inspired by <a href="http://www.stanford2025.com" target="_blank">Stanford Design School's 2015 exploration.</a></li>
                             </ul>
                         </div>
                     </li>
