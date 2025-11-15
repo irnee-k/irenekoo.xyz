@@ -37,8 +37,8 @@
             font-weight: 800;
             color: #1f2937;
             margin-bottom: 1rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
             border-top: 1px solid #e5e7eb;
         }
 
@@ -67,14 +67,23 @@
         }
 
         .content ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
+            list-style-type: none;
+            padding-left: 2.5rem;
             margin-bottom: 1.5rem;
         }
 
         .content li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.4rem;
             color: #4b5563;
+            position: relative;
+        }
+
+        .content li:not(.toggle-item)::before {
+            content: '•';
+            position: absolute;
+            left: -2.5rem;
+            color: #4b5563;
+            font-size: 18px;
         }
 
         .content h3 {
@@ -135,6 +144,47 @@
             color: #4b5563;
             line-height: 1.6;
         }
+
+        /* Toggle styling */
+        .toggle-item {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .toggle-item::before {
+            content: '▸';
+            position: absolute;
+            left: -2.5rem;
+            transition: transform 0.2s;
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        .toggle-item.expanded::before {
+            transform: rotate(90deg);
+        }
+
+        .toggle-content {
+            display: none;
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e5e7eb;
+        }
+
+        .toggle-content.visible {
+            display: block;
+        }
+
+        .toggle-content ul {
+            list-style-type: circle;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .toggle-content li {
+            margin-bottom: 0.5rem;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -147,59 +197,96 @@
             <a href="musings.html" class="active">musings and drafts in progress</a>
         </nav>
 
+        <!-- Page Title -->
+        <header class="mb-8">
+            <h1>musings and drafts in progress</h1>
+        </header>
+
         <!-- Questions Section -->
         <section id="questions">
-            <h2 class="section-title">questions I'm mulling over</h2>
+            <h2 class="section-title">questions & curiosities</h2>
             
             <div class="content">
                 <ul>
-                    <li>How do we build learning systems that adapt to individual curiosity rather than standardized outcomes?</li>
-                    <li>What does meaningful work look like when AI can do most knowledge tasks?</li>
-                    <li>Can economic mobility exist without geographical mobility in the age of remote work?</li>
-                    <li>Why do we still organize education around time (semesters, years) instead of mastery?</li>
-                    <li>What happens to middle managers when coordination becomes trivial?</li>
-                    <li>How do we measure learning that happens outside traditional institutions?</li>
-                    <li>Is the credential or the learning more valuable? And to whom?</li>
+                    <li class="toggle-item" onclick="toggleContent(this)">
+                        What does dynamic "proof of work" or "demonstration of skills" look like in the age of AI?
+                        <div class="toggle-content">
+                            <ul>
+                                <li>The half-life of skills will likely decrease with new tech, but current ways of demonstrating skills (for learning or recruiting purposes) are static.</li>
+                                <li>What should staffing and upskilling look like?</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="toggle-item" onclick="toggleContent(this)">
+                        How might we capture holistic, context-ful picture of individuals as learners and workers?
+                        <div class="toggle-content">
+                            <ul>
+                                <li>Personalization layer - Amazon has a really good idea of who I am as a consumer (loves protein and sweets), and Netflix knows that I like lighthearted k-dramas. Why can't we have a shared data layer for learning and recruiting? Why are they silo'ed?</li>
+                                <li>In Sept/Oct of 2025, I visited 10 campuses to meet student builders and founders. There's a greater appetite for people to take gap semesters to explore - which I love (reflection in progress!). A big question - as people go in and out of school/work, how can we capture learnings and context of individuals?</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>What enablement layer is needed for companies to robustly understand skills of employees, and develop strategies accordingly?</li>
+                    <li class="toggle-item" onclick="toggleContent(this)">
+                        How do we align company/individual incentives to continue investments in lifelong learning?
+                        <div class="toggle-content">
+                            <ul>
+                                <li>What does this look like?</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Smaller Questions Section -->
+        <section id="smaller-questions">
+            <h2 class="section-title">smaller potato questions and areas of interest</h2>
+            
+            <div class="content">
+                <ul>
+                    <li>How is taste formed?</li>
+                    <li>Advertising models are based on human clicks and views. What happens with more agents?</li>
+                    <li>Learning more about chip design, robotics software, brain-computer interface</li>
+                    <li>How do you win in the space of enterprise workflow automation?</li>
                 </ul>
             </div>
         </section>
 
         <!-- Drafts Section -->
         <section id="drafts">
-            <h2 class="section-title">drafts in progress</h2>
+            <h2 class="section-title">drafts & tinkering</h2>
             
             <div class="content">
-                <!-- Draft 1 -->
-                <div class="draft-item">
-                    <div class="draft-title">The Unbundling of Higher Education</div>
-                    <div class="draft-meta">Draft · November 2025</div>
-                    <div class="draft-preview">
-                        Exploring how universities are being disaggregated into their core functions: credentialing, community, curriculum, and career services. What happens when each of these can be sourced independently?
-                    </div>
-                </div>
-
-                <!-- Draft 2 -->
-                <div class="draft-item">
-                    <div class="draft-title">Notes on Economic Mobility in the AI Age</div>
-                    <div class="draft-meta">Draft · October 2025</div>
-                    <div class="draft-preview">
-                        As AI democratizes access to knowledge and tools, the barriers to entry drop dramatically. But does this actually improve economic mobility, or does it just shift the goalposts?
-                    </div>
-                </div>
-
-                <!-- Draft 3 -->
-                <div class="draft-item">
-                    <div class="draft-title">Community Colleges as Innovation Hubs</div>
-                    <div class="draft-meta">Research in progress</div>
-                    <div class="draft-preview">
-                        Conversations with community college administrators reveal institutions adapting faster than traditional universities. They're closer to labor markets, more responsive to student needs, and less constrained by tradition.
-                    </div>
-                </div>
-
-                <!-- Placeholder for more content -->
-                <div class="draft-preview" style="margin-top: 2rem; font-style: italic; color: #9ca3af;">
-                    More coming soon...
-                </div>
+                <ul>
+                    <li class="toggle-item" onclick="toggleContent(this)">
+                        <a href="https://docs.google.com/document/d/1aU_na9fHCH9P6md31KaRgTFMvgOeueo67TLXpZuXGdA/edit?tab=t.0" target="_blank">Various interviews</a> on talent matching and lifelong learning
+                        <div class="toggle-content">
+                            <ul>
+                                <li>Thank you to Harvard Graduate School of Education's Entrepreneurship Fellowship for funding!</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="toggle-item" onclick="toggleContent(this)">
+                        Reimagining higher education - current writing in progress
+                        <div class="toggle-content">
+                            <ul>
+                                <li>Challenging notion that higher educations should be 2-4 years, and should really support learning in and outside of traditional classrooms. Largely inspired by Stanford Design School's 2015 exploration: <a href="http://www.stanford2025.com" target="_blank">Stanford 2025</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Design. Designing thank you cards from scratch</li>
+                    <li class="toggle-item" onclick="toggleContent(this)">
+                        How do you capture "learning everywhere" - rough demo <a href="https://www.loom.com/share/7f4b289d998b4bb3a3ee0e7e3b7e976a" target="_blank">here</a>
+                        <div class="toggle-content">
+                            <ul>
+                                <li>I learn so much in conversations and liminal moments - but it's not easily captured.</li>
+                                <li>The product intent is that users can email, text, or manually input interesting conversations and learnings, to be aggregated in one place. As users compile different learnings, they will be able to see common themes and interests, and be recommended with specific skills and additional resources.</li>
+                                <li>Learnings & limitations - high user input and onboarding required, data may not be robust enough for thoughtful recommendations</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -211,6 +298,16 @@
         </footer>
 
     </div>
+
+    <script>
+        function toggleContent(element) {
+            element.classList.toggle('expanded');
+            const content = element.querySelector('.toggle-content');
+            if (content) {
+                content.classList.toggle('visible');
+            }
+        }
+    </script>
 
 </body>
 </html>
